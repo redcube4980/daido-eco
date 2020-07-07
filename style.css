@@ -1,0 +1,845 @@
+@charset "UTF-8";
+/*
+Theme Name: 日本エコロジスト支援協会
+Theme URI: 
+Author: the redcube
+Author URI: 
+Description: 
+Version: 1.0
+License: 
+License 
+Tags: 
+Text Domain: 日本エコロジスト支援協会
+*/
+/*******************************
+			リセット設定
+*******************************/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+}
+ol,
+ul {
+	list-style: none;
+}
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption,
+th,
+td {
+	font-weight: normal;
+	text-align: left;
+}
+fieldset {
+	min-width: inherit;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+}
+blockquote,
+q {
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	quotes: none;
+}
+a:focus {
+	outline: 0px solid #c1c1c1;
+	outline: 0px solid rgba(51, 51, 51, 0.3);
+}
+a:hover,
+a:active {
+	outline: 0;
+}
+a img {
+	border: 0;
+}
+.social-navigation a:before,
+.secondary-toggle:before,
+.dropdown-toggle:after,
+.bypostauthor > article .fn:after,
+.comment-reply-title small a:before,
+.comment-navigation .nav-next a:after,
+.comment-navigation .nav-previous a:before,
+.byline:before,
+.cat-links:before,
+.tags-links:before,
+.comments-link:before,
+.entry-format:before,
+.edit-link:before,
+.full-size-link:before,
+.pagination .prev:before,
+.pagination .next:before,
+.image-navigation a:before,
+.image-navigation a:after,
+.format-link .entry-title a:after,
+.entry-content .more-link:after,
+.entry-summary .more-link:after,
+.author-link:after {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-family: "Genericons";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	line-height: 1;
+	text-align: center;
+	text-decoration: inherit;
+	text-transform: none;
+	vertical-align: top;
+}
+body,
+button,
+input,
+select,
+textarea {
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 auto;
+	padding: 0;
+}
+p {
+	margin: 0 auto;
+	padding: 0;
+}
+b,
+strong {
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+dfn,
+cite,
+em,
+i {
+
+}
+
+input[type="submit"]{
+	-webkit-appearance:none;
+	border-radius: 0;
+}
+
+/*******************************
+		グローバル設定
+*******************************/
+html{
+	font-size: 62.5%;
+	margin: 0!important;
+	height: 100%;
+	box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: none;
+    line-height: 1;
+    font-weight: normal;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-x: hidden;
+    background-color: transparent;
+    font-feature-settings: "palt";
+	background-image: url("images/ecologist-bg.jpg")
+}
+body p{
+	font-size:16px;
+	font-size:1.6rem;	
+}
+a[href^="tel"]{
+    color:inherit;
+}
+a {
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	color: #005499;
+	transition: all 1s;
+	opacity: 1;
+}
+a:hover {
+	transition: all 1s;
+	opacity: 0.6;
+}
+.youtube {
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-top: 56.25%;
+	margin: 10px auto;
+}
+.youtube  iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.awesome{
+	font-family: "Font Awesome 5 Free";
+}
+#wrapper {
+    height: 100%;
+}
+.br-sp{
+	display: block;
+}
+.br-tab{
+	display: none;
+}
+.br-pc{
+	display: none;
+}
+/*******************************
+	header
+*******************************/
+#site-header {
+    padding-top: 0px;
+    background-size: auto 50px;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background-color: transparent;
+    height: 65px;
+	transition: all 0.5s;
+	transform: translate3d(0,0,1000px);
+}
+#site-header.header-bg {
+    background-size: auto 50px;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background-color: rgba(0, 150, 214, 0.90);
+    height: 65px;
+	transition: all 0.5s;
+	transform: translate3d(0,0,1000px);
+}
+#site-header-inner {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 0 auto;
+	z-index: 100;
+	position: relative;
+	width: 100%;
+}
+#site-header h1.site-title {
+    width: 100px;
+    height: auto;
+	transition: all 0.5s;
+	margin: 11px 0 0 15px;
+}
+#site-header a.site-logo-link{
+	width:100%;
+	height: 100%;
+	display: block;
+}
+#site-header .site-logoimage{
+	width: 100px;
+	height: auto;
+	transition: all 0.5s;
+}
+#site-header.header-bg h1.site-title {
+    height: auto;
+	transition: all 0.5s;
+}
+#site-header.header-bg a.site-logo-link{
+	width:100%;
+	height: 100%;
+	display: block;
+}
+#site-header.header-bg .site-logoimage{
+	height: auto;
+	transition: all 0.5s;
+}
+.header-pc-menu-right{
+	width: 100%;
+	position: absolute;
+	padding: 20px;
+	height: 100vh;
+	display: none;
+}
+.main-nav {
+    display: none;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.main-nav li {
+    padding: 50% 0 8%;
+    text-align: center;
+    line-height: 1.4;
+    position: relative;
+}
+.main-nav-link {
+    color: #fff;
+    font-size: 3vw;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+	position: relative;
+	display: block;
+}
+.main-nav li a::before {
+    position: absolute;
+    content: url("images/main-navi-door.jpg");
+    display: block;
+    width: 80%;
+    height: auto;
+    transform: translate(-50%,-90%)scale(0.8);
+    top: 0%;
+    left: 50%;
+}
+.hamburger {
+    display: block;
+    width: 38px;
+    height: 36px;
+    position: absolute;
+    background-color: transparent;
+    right: 15px;
+	top: 13px;
+    cursor: pointer;
+    z-index: 100;
+}
+.hamburger div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 2px;
+}
+.hamburger div span {
+    border-top: 3px solid #fff;
+    display: block;
+    width: 100%;
+    transition: all 1s;
+    position: relative;
+}
+.OpenNav .hamburger div span:nth-child(1) {
+	-webkit-transform: translateY(13px) rotate(-45deg);
+	-moz-transform: translateY(13px) rotate(-45deg);
+	transform: translateY(13px) rotate(-45deg);
+	animation: header_0n 2.5s ease-in-out 0s infinite;
+	border-top: 3px solid #fff;
+}
+.OpenNav .hamburger div span:nth-child(2) {
+	-webkit-transform: scaleX(0.1);
+	-moz-transform: scaleX(0.1);
+	transform: scaleX(0.1);
+	animation: header_0n 2.5s ease-in-out 0s infinite;
+	border-top: 3px solid #fff;
+}
+.OpenNav .hamburger div span:nth-child(3) {
+	-webkit-transform: translateY(-13px) rotate(45deg);
+	-moz-transform: translateY(-13px) rotate(45deg);
+	transform: translateY(-13px) rotate(45deg);
+	animation: header_0n 2.5s ease-in-out 0s infinite;
+	border-top: 3px solid #fff;
+}
+header#site-header.OpenNav {
+    height: 100%;
+    transition: all 1s ease;
+    background-color: rgba(0, 150, 214, 1);
+    mix-blend-mode: unset;
+}
+#header-navi {
+    position: fixed;
+    display: none;
+    transition: all 1s ease;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.OpenNav #header-navi {
+    transition: all 1s ease;
+}
+#header-navi ul {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+	transition: all 1s ease;
+	width: 100%;
+}
+.OpenNav #header-navi ul {
+    transition: all 1s ease;
+}
+#header-navi ul li{
+	line-height: 1.8;
+	text-align: center;
+}
+#header-navi ul li a{
+	font-family: futura-pt-condensed,sans-serif;
+	font-weight: 800;
+	font-style: normal;	
+	color: #513813;
+	font-size: 16px;
+	text-decoration: none;
+}
+/*******************************
+	main
+*******************************/
+main {
+    height: auto;
+    padding-top: 170px;
+    padding-bottom: 30px;
+}
+
+/*******************************
+	footer
+*******************************/
+footer {
+    background-color: #808080;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    position: relative;
+    flex-flow: column;
+    padding: 30px 0;
+}
+footer p{
+	text-align: center;
+	color: #fff;
+	font-size: 10px;
+}
+#footer-block {
+    text-align: center;
+}
+nav#footer-menu{
+	margin-bottom: 30px;
+}
+ul#footer-menu-inner{
+	display: flex;
+	align-items: center;
+	flex-flow: column;
+	justify-content: space-between;
+	width: 100%;
+	margin: 0 auto;
+}
+ul#footer-menu-inner li{
+	position: relative;
+	padding-right: 0;
+	margin: 8px 0;
+}
+ul#footer-menu-inner li:first-child{
+	margin: 8px 0 0;
+}
+ul#footer-menu-inner li::after{
+	content: none;
+}
+ul#footer-menu-inner li:last-child::after{
+	position: absolute;
+	display: block;
+	content: none;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #816f54;
+	font-size: 16px;
+}
+ul#footer-menu-inner li a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 1;
+	position: relative;
+}
+ul#footer-menu-inner li a .daido-logo {
+    width: 110px;
+}
+ul#footer-menu-inner li a:hover{
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: underline;
+	opacity: 0.7;
+	transition: all 0.5s;
+}
+ul#footer-menu-inner li.twitter a{
+	padding-left: 32px;
+}
+ul#footer-menu-inner li.twitter a::before {
+	position: absolute;
+	content: "\f099";
+	display: block;
+	margin-right: 10px;
+	font-weight: 400;
+	left: 0;
+	top: 50%;
+	font-family: "Font Awesome 5 Brands";
+	transform: translateY(-50%);
+	font-size: 28px;
+	color: rgb(29, 161, 242);
+}
+#footer-block h2{
+	color: #fff;
+	font-weight: bold;
+	font-size: 16px;
+	margin: 0 auto 10px;
+}
+@media only screen and (min-width: 600px) {
+.br-sp{
+	display: none;
+}
+.br-tab{
+	display: block;
+}
+.br-pc{
+	display: none;
+}
+/*******************************
+	header
+*******************************/
+.main-nav-link {
+    color: #fff;
+    font-size: 2.4vw;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+/*******************************
+	footer
+*******************************/
+ul#footer-menu-inner{
+	flex-flow: row nowrap;
+}
+ul#footer-menu-inner li{
+	position: relative;
+	padding-right: 32px;
+	margin: 0;
+}
+ul#footer-menu-inner li:first-child{
+	margin: 0;
+}
+ul#footer-menu-inner li:last-child {
+    position: relative;
+    padding-right: 0;
+}
+ul#footer-menu-inner li::after{
+	position: absolute;
+	display: block;
+	content: "｜";
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+}
+ul#footer-menu-inner li a{
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: none;
+	line-height: 1;
+}
+ul#footer-menu-inner li a:hover{
+	font-size: 16px;
+}
+footer p{
+	font-size: 13px;
+}
+/*******************************
+	main
+*******************************/
+main {
+    height: auto;
+    padding-top: 170px;
+	padding-bottom: 30px;
+}
+main .swiper-slide img{
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+main .container #overview-text p .sp{
+	display: none;	
+}
+main .container #sns-block-top {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+main .container #sns-block-top #facebook {
+    width: 48%;
+	margin-bottom: 0;
+}
+main .container #sns-block-top #twitter {
+    width: 48%;
+}
+main .container #sns-block-top .sns-block-inner {
+    width: 100%;
+    height: 500px;
+    background-color: #fff;
+}
+}
+@media only screen and (min-width: 1024px) {
+.br-tab{
+	display: none;
+}
+.br-pc{
+	display: block;
+}
+/*******************************
+	header
+*******************************/
+#site-header {
+	padding-top: 0px;
+	background-size: auto;
+	position: absolute;
+	z-index: 100;
+	height: auto;
+	transition: none;
+	transform: translate3d(0,0,1000px);
+}
+header#site-header.OpenNav{
+	padding-top: 0px;
+	background-size: auto;
+	position: absolute;
+	z-index: 100;
+	height: auto;
+	transition: none;
+	background-color: transparent;
+	transform: translate3d(0,0,1000px);
+}
+#site-header.header-bg {
+    height: auto;
+	position: fixed;
+	background-size: auto;
+}
+header#site-header.header-bg.OpenNav{
+	background-color: rgba(0, 150, 214, 0.90);
+	transition: all 0.5s;
+}
+#site-header.header-bg.OpenNav {
+    height: auto;
+	position: fixed;
+	background-size: auto;
+}
+#header-navi {
+    position: fixed;
+    display: none!important;
+    transition: all 1s ease;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+#header-navi ul {
+    display: none!important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 1s ease;
+    width: 100%;
+}
+#site-header-inner {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px auto;
+	align-items: center;
+	max-width: 100%;
+}
+#site-header h1.site-title {
+    width: 150px;
+    height: auto;
+	margin: 0 0 0 30px;
+}
+#site-header .site-logoimage{
+	width: 150px;
+	height: auto;
+}
+#site-header.header-bg h1.site-title {
+    width: 150px;
+    height: auto;
+}
+#site-header.header-bg .site-logoimage{
+	width: 150px;
+	height: auto;
+}
+.header-pc-menu-right {
+    width: 780px;
+    margin: 0 30px 0 0;
+    padding: 0;
+    position: relative;
+    display: block !important;
+    height: auto;
+}
+.main-nav {
+    display: flex!important;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+	height: auto;
+	align-items: flex-end;
+	position: relative;
+	top: auto;
+	left: auto;
+	transform: translate(0%,0%);
+}
+.main-nav li{
+	position: relative;
+	transform-origin: center;
+	padding: 0;
+	text-align: center;
+	line-height: 1;
+}
+.main-nav li a::before {
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url("images/main-navi-door.jpg");
+    width: 33px;
+    height: 43px;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 0;
+    transform-origin: center;
+    background-size: contain;
+}
+a.main-nav-link{
+    width: 100%;
+    height: 100%;
+    display: block;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", serif;
+	font-weight: bold;
+	text-decoration: none;
+}
+a.main-nav-link{
+	display: block;	
+}
+.animation-title{
+transform-origin:center top;
+animation:title 1s both;
+}
+.animation{
+	transform-origin:center top;
+	animation:show 1s both;
+	animation-delay:3s;
+}
+.d1 {animation-delay:0.5s;}
+.d2 {animation-delay:1s;}
+.d3 {animation-delay:1.5s;}
+.d4 {animation-delay:2s;}
+a.main-nav-link,a.overview-link{
+	transition: all 1s;
+	transform:scale(1);
+	width: 100%;
+	height: 100%;
+	display: block;
+	color: #fff;
+	padding-left: 40px;
+}
+.main-nav li a:hover{
+	transition: all 1s;
+    transform: scale(1.2);
+	opacity: 1;
+	text-decoration: underline;
+}
+.hamburger {
+    display: none!important;
+}
+.header-menu {
+	display: none;
+}
+/*******************************
+	main
+*******************************/
+main {
+    height: auto;
+    padding-top: 30px;
+	padding-bottom: 30px;
+}
+ul#footer-menu-inner li a .daido-logo {
+    width: 150px;
+}
+}
+@keyframes show {
+0% {
+	transform:translate(0,-3em);
+	opacity:0;
+}
+50% {
+
+}
+100% {
+	transform:translate(0,0);
+	opacity:1;
+}
+}
+@keyframes titte {
+	0%{transform:translate(0,-2em)scale(1.2);opacity:0;}
+	50%{}
+	100%{transform:translate(0,0)scale(1);opacity:1;}}
+@media only screen and (min-width: 1281px) {
+#site-header h1.site-title {
+    width: 150px;
+    height: auto;
+	margin: 0 0 0 80px;
+}
+.header-pc-menu-right {
+    width: 900px;
+    margin: 0 80px 0 0;
+    padding: 0;
+    position: relative;
+    display: block !important;
+    height: auto;
+}
+}

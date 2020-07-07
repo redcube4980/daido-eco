@@ -1,0 +1,761 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*******************************
+	main
+*******************************/
+main {
+    height: auto;
+    padding-top: 0px;
+	padding-bottom: 30px;
+}
+main .container {
+    width: 100%;
+	margin: 0 auto ;
+	padding: 0;
+}
+/*******************************
+	site-top-door-block
+*******************************/
+main .container #site-top-door-block{
+	position: absolute;
+	transform-origin: center;
+	-webkit-animation:  door-open 2.5s ease-in-out;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-delay:1s;
+	animation:  door-open 2.5s ease-in-out;
+	animation-iteration-count: 1;
+	animation-delay:1s;
+	width: 100%;
+}
+@keyframes door-open {
+  0% {
+	transform: scale(1);
+	opacity: 1;
+	}
+  60% { 
+	opacity: 1;
+	}
+  100% { 
+	transform: scale(5);
+	opacity: 0;
+	}
+}
+main .container #site-top-door-block .open-the-door {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    top: 50%;
+    padding: 0 10%;
+    transform: translateY(-50%);
+	transform-origin: center;
+	-webkit-animation:  open-the-door 3.5s ease-in-out;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-delay:0s;
+	animation:  open-the-door 3.5s ease-in-out;
+	animation-iteration-count: 1;
+}
+@keyframes open-the-door {
+  0% {
+	transform: scale(1.2)translate3d(0,-50%,500px);
+	opacity: 0;
+	}
+  10% { 
+	transform: scale(1)translate3d(0,-50%,500px);
+	opacity: 1;
+	}
+  100% { 
+	transform: scale(2)translate3d(0,-50%,500px);
+	opacity: 0;
+	}
+}
+main .container #site-top {
+    position: relative;
+	overflow: hidden;
+}
+main .container #site-top-bg {
+    position: relative;
+}
+main .container #site-top-door {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width: 17.3%;
+    height: 44%;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+	perspective: 500px;
+	transform-style: preserve-3d;
+	overflow: visible;
+}
+#site-top-door #site-top-left {
+    width: 50%;
+    height: 100%;
+    background-color: transparent;
+    display: block;
+	position: relative;
+	-webkit-perspective: 200px;
+	transform-origin: left;
+}
+#site-top-door #site-top-left {
+    width: 50%;
+    height: 100%;
+    display: block;
+	position: relative;
+	-webkit-perspective: 200px;
+	transform-origin: left;
+	-webkit-animation: door-left 2s;
+	-webkit-animation-delay:1.5s;
+	-webkit-animation-iteration-count: 1;
+	animation: door-left 2s;
+	animation-delay:1.5s;
+	animation-iteration-count: 1;
+}
+@keyframes door-left {
+  0% {   transform: rotateY(0) ;}
+  100% {  transform: rotateY(-180deg) ; }
+}
+#site-top-door #site-top-right {
+    width: 50%;
+    height: 100%;
+    background-color: transparent;
+    display: block;
+	position: relative;
+}
+#site-top-door #site-top-right {
+    width: 50%;
+    height: 100%;
+    display: block;
+	position: relative;
+	-webkit-perspective: 200px;
+	perspective: 200px;
+	transform-origin: right;
+	-webkit-animation: door-right 2s;
+	-webkit-animation-delay:1.5s;
+	-webkit-animation-iteration-count: 1;
+	animation: door-right 2s;
+	animation-delay:1.5s;
+	animation-iteration-count: 1;
+}
+@keyframes door-right {
+  0% {   transform: rotateY(0) ;}
+  100% {  transform: rotateY(180deg) ; }
+}
+main .container h2.site-top-bg-text {
+	position: absolute;
+	z-index: 2;
+	width: 60%;
+	height: auto;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	display: none;
+}
+main .container h2.site-top-bg-text img{
+	filter: drop-shadow(0.0.40px.40px #fff);
+}
+.site-top-bg-image{
+	width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+/*******************************
+	site-top-navi
+*******************************/
+#site-top-navi {
+    padding: 30px 0 0;
+    text-align: center;
+}
+#site-top-navi p {
+	font-size: 16px;
+	line-height: 1.6;
+	letter-spacing: 1px;
+	font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", serif;
+}
+#site-top-navi nav{
+	margin: 60px auto 0;
+	max-width: 1120px;
+}
+#site-top-navi nav ul {
+	display: flex;
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+	flex-flow: row wrap;
+}
+#site-top-navi nav ul li {
+	width: 50%;
+	text-align: left;
+	margin-bottom: 20px;
+}
+#site-top-navi nav ul li a{
+	font-size: 3.4vw;
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", serif;	
+	color: #000;
+	text-decoration: none;
+	position: relative;
+	padding-left: 10%;
+	transition: none;
+}
+#site-top-navi nav ul li a::before {
+    content: "";
+    width: 2vw;
+    height: 2vw;;
+    border: 0px;
+    border-top: solid 2px #ff0000;
+    border-right: solid 2px #ff0000;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 45%;
+	left: 0;
+}
+#site-top-navi nav ul li a:hover{
+	text-decoration: underline;
+}
+#site-top-link-inner{
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 1120px;
+	margin: 0 auto 100px;
+	text-align: center;
+	padding: 20px 15px 0;
+}
+#site-top-link-inner #site-top-link-hamaton{
+	background-color: #14274a;
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	position: relative;
+}
+#site-top-link-inner #site-top-link-hamaton::before {
+    display: block;
+    content: "";
+	position: relative;
+	padding-top: 100%;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+#site-top-link-inner #site-top-link-hamaton::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 15px;
+    bottom: 15px;
+    display: block;
+    z-index: 3;
+    border-right: 3vw solid #fff;
+    border-bottom: 3vw solid #fff;
+    border-left: 3vw solid transparent;
+    border-top: 3vw solid transparent;
+}
+#site-top-link-inner #site-top-link-hamaton a{
+	display: flex;
+	justify-content: space-around;
+	flex-flow: column;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	text-decoration: none;
+	transition: all 1s;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#site-top-link-inner #site-top-link-hamaton a:hover{
+	opacity: 1;
+}
+#site-top-link-inner #site-top-link-hamaton.open a .site-top-link-middle-door-left {
+	width: 50%;
+	transform: rotateY(-80deg);
+}
+#site-top-link-inner #site-top-link-hamaton.open a .site-top-link-middle-door-right {
+	width: 50%;
+	transform: rotateY(80deg);
+}
+#site-top-link-inner #site-top-link-hamaton .top-link-middle-image-hokkaido {
+    position: absolute;
+    width: 40%;
+    z-index: 3;
+    left: 5%;
+    top: 45%;
+	transform: translate3d(0,0,500px);
+}
+#site-top-link-inner #site-top-link-inochi{
+	background-color: #0b3513;
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+	position: relative;
+}
+#site-top-link-inner #site-top-link-inochi::before {
+    display: block;
+    content: "";
+	position: relative;
+	padding-top: 100%;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+#site-top-link-inner #site-top-link-inochi::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 15px;
+    bottom: 15px;
+    display: block;
+    z-index: 3;
+    border-right: 15px solid #fff;
+    border-bottom: 15px solid #fff;
+    border-left: 15px solid transparent;
+    border-top: 15px solid transparent;
+}
+#site-top-link-inner #site-top-link-inochi a {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+	transition: all 1s;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#site-top-link-inner #site-top-link-inochi a:hover{
+	opacity: 1;
+}
+#site-top-link-inner #site-top-link-inochi.open a .site-top-link-middle-door-left {
+	width: 50%;
+	transform: rotateY(-80deg);
+}
+#site-top-link-inner #site-top-link-inochi.open a .site-top-link-middle-door-right {
+	width: 50%;
+	transform: rotateY(80deg);
+}
+#site-top-link-inner .site-top-link-top {
+    position: relative;
+	height: 22%;
+	display: flex;
+	align-items: center;
+}
+#site-top-link-inner .site-top-link-top h3 {
+    font-size: 4vw;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    width: 100%;
+    height: auto;
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", serif;
+    position: relative;
+}
+#site-top-link-inner .site-top-link-top h3::before {
+    content: url("../images/pickup.svg");
+    position: absolute;
+    left: 8%;
+    top: 58%;
+    transform: translateY(-50%)scale(1.2);
+    width: 10%;
+    height: auto;
+    display: block;
+}
+#site-top-link-inner .site-top-link-middle {
+    height: 50%;
+    position: relative;
+}
+#site-top-link-inner .top-link-middle-image{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+#site-top-link-inner .site-top-link-middle-door {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	overflow: hidden;
+}
+#site-top-link-inner .site-top-link-middle-door-left {
+    position: relative;
+	height: 100%;
+	width: 50%;
+	overflow: hidden;
+	transform: rotateY(0deg);
+	transform-origin: left;
+	transition: all 1s;
+}
+#site-top-link-inner .site-top-link-middle-door-right{
+	position: relative;
+	height: 100%;
+	width: 50%;
+	overflow: hidden;
+	transform: rotateY(0deg);
+	transform-origin: right;
+	transition: all 1s;
+}
+#site-top-link-inner .site-top-link-bottom {
+    position: relative;
+    height: 28%;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: center;
+}
+#site-top-link-inner .site-top-link-bottom h2 {
+    font-size: 6vw;
+    color: #fff;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+#site-top-link-inner .site-top-link-bottom p {
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 3vw;
+    margin-bottom: 5px;
+}
+#site-top-link-inner .site-top-link-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/*******************************
+	goals-block
+*******************************/
+#goals-block{
+	display: flex;
+	width: 100%;
+	max-width: 1120px;
+	flex-flow: column;
+	justify-content: space-between;
+	margin: 0 auto 20px;
+	text-align: center;
+	padding: 0 15px;
+}
+#goals-block .goals{
+	width: 280px;
+	margin: 0 auto 30px;
+}
+#goals-block .goals-text {
+	font-size: 14px;
+	line-height: 1.6;
+}
+#goals-link {
+    width: 24%;
+    margin: 0 auto;
+}
+#goals-block .goals-link{
+    margin-top: 20px;
+    font-size: 3.4vw;
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", serif;	
+	display: block;
+	position: relative;
+	padding-left: 10%;
+	color: #000;
+	text-decoration: none;
+	transition: none;
+}
+#goals-block .goals-link:hover{
+	text-decoration:underline;
+}
+#goals-block .goals-link::before {
+    content: "";
+    width: 2vw;
+    height: 2vw;
+    border: 0px;
+    border-top: solid 2px #ff0000;
+    border-right: solid 2px #ff0000;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 45%;
+    left: 0;
+}
+@media only screen and (min-width: 600px) {
+/*******************************
+	site-top-navi
+*******************************/
+#site-top-navi p {
+    font-size: 3.2vw;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", serif;
+}
+#site-top-navi{
+	padding: 50px 0 0;
+	text-align: center;
+}
+#site-top-navi nav ul {
+    justify-content: center;
+}
+#site-top-navi nav ul li {
+    width: 45%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+#site-top-navi nav ul li a {
+    font-size: 2.8vw;
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", serif;
+    color: #000;
+    text-decoration: none;
+    position: relative;
+    padding-left: 25px;
+}
+#site-top-navi nav ul li a::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border: 0px;
+    border-top: solid 2px #ff0000;
+    border-right: solid 2px #ff0000;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 50%;
+	left: 0;
+}
+#site-top-link-inner {
+    flex-flow: row nowrap;
+}
+#site-top-link-inner #site-top-link-hamaton {
+    width: 48%;
+	margin-bottom: 0px;
+}
+#site-top-link-inner #site-top-link-inochi {
+    width: 48%;
+}
+#site-top-link-inner #site-top-link-hamaton::after {
+    border-right: 1.5vw solid #fff;
+    border-bottom: 1.5vw solid #fff;
+    border-left: 1.5vw solid transparent;
+    border-top: 1.5vw solid transparent;
+}
+#site-top-link-inner #site-top-link-inochi::after {
+    border-right: 1.5vw solid #fff;
+    border-bottom: 1.5vw solid #fff;
+    border-left: 1.5vw solid transparent;
+    border-top: 1.5vw solid transparent;
+}
+#site-top-link-inner #site-top-link-hamaton.open a .site-top-link-middle-door-left {
+	width: 50%;
+	transform: rotateY(-80deg);
+}
+#site-top-link-inner #site-top-link-hamaton.open a .site-top-link-middle-door-right {
+	width: 50%;
+	transform: rotateY(80deg);
+}
+#site-top-link-inner #site-top-link-inochi.open a .site-top-link-middle-door-left {
+	width: 50%;
+	transform: rotateY(-80deg);
+}
+#site-top-link-inner #site-top-link-inochi.open a .site-top-link-middle-door-right {
+	width: 50%;
+	transform: rotateY(80deg);
+}
+#site-top-link-inner .site-top-link-top h3 {
+    font-size: 2vw;
+}
+#site-top-link-inner .site-top-link-bottom p {
+    font-size: 2vw;
+}
+#site-top-link-inner .site-top-link-bottom h2 {
+    font-size: 3vw;
+	letter-spacing: 2px;
+}
+/*******************************
+	goals-block
+*******************************/
+#goals-block{
+	padding: 0;
+}
+#goals-link {
+    width: auto;
+    margin: 0 auto;
+}
+#goals-block .goals-text{
+	font-size: 18px;
+	line-height: 1.6;
+}
+#goals-block .goals-link{
+    font-size: 2.8vw;
+	padding-left: 25px;
+}
+#goals-block .goals-link::before {
+    width: 12px;
+    height: 12px;
+    top: 50%;
+}
+}
+@media only screen and (min-width: 1024px) {
+/*******************************
+	main
+*******************************/
+main {
+    height: auto;
+    padding-top: 0px;
+	padding-bottom: 30px;
+}
+main .container {
+    width: 100%;
+	margin: 0 auto ;
+	padding: 0;
+}
+/*******************************
+	site-top-door-block
+*******************************/
+main .container h2.site-top-bg-text {
+    position: absolute;
+    z-index: 2;
+    width: 40%;
+    height: auto;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+	display: none;
+}
+.site-top-bg-image{
+	width: 100%;
+	height: auto;
+}
+/*******************************
+	site-top-navi
+*******************************/
+#site-top-navi{
+	padding: 50px 0;
+	text-align: center;
+}
+#site-top-navi p{
+    font-size: 28px;
+    line-height: 1.6;
+    letter-spacing: 5px;
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", serif;	
+}
+#site-top-navi nav ul {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+	padding: 0 20px;
+	flex-flow: row nowrap;
+}
+#site-top-navi nav ul li {
+	width:  auto;
+	text-align: center;
+	margin-bottom: 0px;
+}
+#site-top-navi nav ul li a {
+	font-size: 21px;
+	font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", serif;
+	color: #000;
+	text-decoration: none;
+	position: relative;
+	padding-left: 25px;
+}
+#site-top-navi nav ul li a::before {
+    width: 12px;
+    height: 12px;
+}
+#site-top-link-inner {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 1120px;
+	margin: 0 auto 100px;
+	text-align: center;
+	padding: 20px 0 0;
+}
+#site-top-link-inner #site-top-link-hamaton{
+	width: 48%;
+    height: auto;
+    border-radius: 10px;
+    max-width: 540px;
+	margin-bottom: 0;
+}
+#site-top-link-inner #site-top-link-hamaton::before {
+    padding-top: 90%;
+}
+#site-top-link-inner #site-top-link-inochi {
+    width: 48%;
+    height: auto;
+    border-radius: 10px;
+    max-width: 540px;
+}
+#site-top-link-inner #site-top-link-inochi::before {
+    padding-top: 90%;
+}
+#site-top-link-inner #site-top-link-hamaton::after {
+    border-right: 15px solid #fff;
+    border-bottom: 15px  solid #fff;
+    border-left: 15px  solid transparent;
+    border-top: 15px  solid transparent;
+}
+#site-top-link-inner #site-top-link-inochi::after {
+    border-right: 15px  solid #fff;
+    border-bottom: 15px  solid #fff;
+    border-left: 15px  solid transparent;
+    border-top: 15px  solid transparent;
+}
+#site-top-link-inner .site-top-link-top h3 {
+    font-size: 24px;
+}
+#site-top-link-inner .site-top-link-top h3::before {
+    content: url("../images/pickup.svg");
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%)scale(1.2);
+    width: 40px;
+    height: 50px;
+    display: block;
+}
+#site-top-link-inner .site-top-link-bottom p {
+    font-size: 18px;
+}
+#site-top-link-inner .site-top-link-bottom h2 {
+    font-size: 36px;
+	letter-spacing: 5px;
+}
+/*******************************
+	goals-block
+*******************************/
+#goals-block .goals {
+	width: 500px;
+	margin: 0 auto 30px;
+}
+#goals-block .goals-link{
+    font-size: 21px;
+}
+}
