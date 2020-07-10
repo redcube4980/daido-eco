@@ -7,10 +7,6 @@ $(function() {
 	});
 });
 
-window.onload = function () {
-		$('#site-top-door-block').delay(1000).fadeToggle(2000);
-		$('.site-top-bg-text').delay(2000).fadeIn(4000);
-};
 
 var startPos = 0,winScrollTop = 0;
 $(window).on('scroll',function(){

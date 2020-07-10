@@ -4,7 +4,7 @@
 	contents
 *******************************/
 #contents .content {
-    padding: 0 15px 30%;
+    padding: 0 15px 40%;
     background-image: url("../images/technology/technology-bg.png");
     background-position: bottom;
     background-repeat: no-repeat;
@@ -26,6 +26,56 @@
 	margin: 20px 0 0;
 	align-items: center;
 }
+#contents .content #content-box ul {
+	display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: flex-start;
+	width: 100%;
+}
+#contents .content #content-box ul li{
+	width: 100%;
+	margin-bottom: 10%;
+}
+#contents .content #content-box ul li a{
+	color: #000;	
+}
+.technology-image{
+	overflow: hidden;	
+}
+.technology-image img{
+	width: 100%;
+	height: auto;
+	transform: scale(1);
+	transform-origin: center;
+	transition: all 1s;
+}
+#contents .content #content-box ul li a:hover .technology-image img{
+	transition: all 1s;
+	transform: scale(1.4);
+}
+.technology-link-title {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #000;
+    font-weight: bold;
+	position: relative;
+	padding-left: 16px;
+}
+.technology-link-title::before{
+	content: "";
+    width: 10px;
+    height: 10px;
+    border: 0px;
+    border-top: solid 2px #ff0000;
+    border-right: solid 2px #ff0000;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg) translate(-50%,-10%);
+    position: absolute;
+    top: 50%;
+    left: 0;	
+}
 #contents .content h3.content-title-en {
     position: absolute;
     bottom: 20px;
@@ -42,6 +92,9 @@
 /*******************************
 	main
 *******************************/
+#contents .content {
+    padding: 0 15px 30%;
+}
 #contents .content #content-box {
     display: flex;
     flex-flow: row nowrap;
@@ -98,15 +151,31 @@
     top: 50%;
     left: 0;	
 }
-
 }
 @media only screen and (min-width: 1024px) {
 /*******************************
 	main
 *******************************/
-
+#contents #contents-title h3.contents-title {
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", serif;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 1.2;
+    margin: 0;
+    text-align: left;
+    width: 700px;
+}
 }
 @media only screen and (min-width: 1281px) {
+#contents #contents-title h3.contents-title {
+    font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", serif;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 1.2;
+    margin: 0;
+    text-align: left;
+    width: 900px;
+}
 #contents .content #content-box ul {
 	display: flex;
     flex-flow: row nowrap;

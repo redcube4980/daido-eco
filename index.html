@@ -50,11 +50,13 @@
 	<section id="site-top">
 	<div id="site-top-door-block">
 		<h2 class="open-the-door"><img class="bg-text" src="images/open-the-door.svg" alt="OPEN THE DOOR!"/></h2>
+		<div id="site-top-door-block-inner">
 		<div id="site-top-door">
 			<div id="site-top-left"><img class="site-top-bg-image" src="images/top-bg-door-left.jpg" alt="扉左"/></div>
 			<div id="site-top-right"><img class="site-top-bg-image" src="images/top-bg-door-right.jpg" alt="扉右"/></div>
 		</div>
 		<div id="site-top-bg"><img class="site-top-bg-image" src="images/top-bg-daido.png" alt="バックグラウンドイメージ01"/></div>
+		</div>
 	</div>
 	<div id="site-top-door-block2">
 		<h2 class="site-top-bg-text"><img class="bg-text" src="images/text-futre.svg" alt="さあ、サステナブルな未来へ。"/></h2>
@@ -125,8 +127,38 @@
 	<p>Copyright©2020 Daido Steel Co., Ltd.</p>
 </footer>
 </div>
-<script src="js/jquery-3.3.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(function(){
+    $('a[href^="#"]').click(function(){
+        var speed = 500;
+        var href= $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $("html, body").animate({scrollTop:position}, speed, "swing");
+        return false;
+    });
+});
+</script>
 <script src="js/userAgent.js"></script>
 <script src="js/common.js"></script>
+<script type="text/javascript">
+$(function() {
+  var h = $(window).height();
+});
+$(window).on('load', function () { // 読み込み完了したら実行する
+	$('#loader-bg').delay(900).fadeOut(800);
+	$('#loader').delay(600).fadeOut(300);
+	$('#wrapper').css('display', 'block');
+	$('.site-top-bg-text').delay(2000).fadeIn(4000);
+	setTimeout(function(){
+		$('#site-top-door-block-inner').addClass('amiation');
+		$('.open-the-door').addClass('amimation');
+	}, 1*50);
+	setTimeout(function(){
+		$('#site-top-door-block').delay(1000).fadeOut(2000);
+	}, 1*700);
+});
+</script>
 </body>
 </html>

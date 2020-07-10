@@ -19,6 +19,14 @@ main .container {
 *******************************/
 main .container #site-top-door-block{
 	position: absolute;
+	width: 100%;
+}
+main .container #site-top-door-block-inner{
+	position: relative;
+	width: 100%;
+}
+main .container #site-top-door-block-inner.amiation{
+	position: relative;
 	transform-origin: center;
 	-webkit-animation:  door-open 2.5s ease-in-out;
 	-webkit-animation-iteration-count: 1;
@@ -48,12 +56,22 @@ main .container #site-top-door-block .open-the-door {
     top: 50%;
     padding: 0 10%;
     transform: translateY(-50%);
+	opacity: 0;
+}
+main .container #site-top-door-block .open-the-door.amimation {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    top: 50%;
+    padding: 0 10%;
+    transform: translateY(-50%);
 	transform-origin: center;
 	-webkit-animation:  open-the-door 3.5s ease-in-out;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-delay:0s;
 	animation:  open-the-door 3.5s ease-in-out;
 	animation-iteration-count: 1;
+	opacity: 0;
 }
 @keyframes open-the-door {
   0% {
@@ -112,7 +130,7 @@ main .container #site-top-door {
 	-webkit-animation-delay:1.5s;
 	-webkit-animation-iteration-count: 1;
 	animation: door-left 2s;
-	animation-delay:1.5s;
+	animation-delay:1.8s;
 	animation-iteration-count: 1;
 }
 @keyframes door-left {
@@ -138,7 +156,7 @@ main .container #site-top-door {
 	-webkit-animation-delay:1.5s;
 	-webkit-animation-iteration-count: 1;
 	animation: door-right 2s;
-	animation-delay:1.5s;
+	animation-delay:1.8s;
 	animation-iteration-count: 1;
 }
 @keyframes door-right {
