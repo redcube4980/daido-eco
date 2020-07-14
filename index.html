@@ -1,6 +1,5 @@
 <!doctype html>
-<html lang="ja">
-<head>
+<html lang="ja"><head>
 <meta charset="UTF-8">
 <title>大同特殊鋼|環境サイト</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +7,79 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <meta name="robots" content="noindex">
-
+<meta http-equiv="Pragma" content="no-cache">
 <link rel="apple-touch-icon" href="#">
 <link rel="icon" type="image/x-icon" href="#">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function() {
+  var h = $(window).height();
+	$('#loader-bg ,#loader').height(h).css('display','block');
+	$('#wrapper').css('display','none');
+});
+$(window).on('load',function () {
+	$('#loader-bg').delay(900).fadeOut(800);
+	$('#loader').delay(600).fadeOut(300);
+	$('#wrapper').fadeIn(100);
+	$('.site-top-bg-text').delay(2000).fadeIn(4000);
+	setTimeout(function(){
+		$('#site-top-door-block-inner').addClass('aniation');
+		$('.open-the-door').addClass('animation');
+	}, 1*50);
+	setTimeout(function(){
+		$('#site-top-left').addClass('animation');
+		$('#site-top-right').addClass('animation');
+	}, 1*80);
+	setTimeout(function(){
+		$('#site-top-door-block').delay(1400).fadeOut(1400);
+	}, 1*700);
+});
+$(function(){
+  setTimeout('stopload()',000);
+});
+function stopload(){
+	$('#wrapper').fadeIn(100);
+	$('#loader-bg').delay(900).fadeOut(800);
+	$('#loader').delay(600).fadeOut(300);
+	$('.site-top-bg-text').delay(2000).fadeIn(4000);
+	setTimeout(function(){
+		$('#site-top-door-block-inner').addClass('aniation');
+		$('.open-the-door').addClass('animation');
+	}, 1*50);
+	setTimeout(function(){
+		$('#site-top-left').addClass('animation');
+		$('#site-top-right').addClass('animation');
+	}, 1*80);
+	setTimeout(function(){
+		$('#site-top-door-block').delay(1400).fadeOut(1400);
+	}, 1*700);
+}
+</script>
+<style rel="stylesheet" type="text/css">
+#loader-bg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 150, 214, 1);
+  z-index: 9998;
+  transform: translate3d(0,0,2000px);
+}
+#loader {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px !important;
+    text-align: center;
+    color: #fff;
+    z-index: 9999;
+	transform: translate3d(-50%,-50%,2000px);
+}	
+</style>
 <link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" type="text/css" href="css/front-page.css">
 
@@ -21,24 +89,24 @@
 <body>
 <div id="loader-bg">
   <div id="loader">
-    <img src="images/loading.svg" width="80" height="80" alt="Now Loading..." />
+    <img src="images/loading.svg" width="80" height="80" alt="" />
   </div>
 </div>
 <div id="wrapper">
 <header id="site-header">
 	<div id="site-header-inner">
 	<h1 class="site-title animation-title">
-		<a class="site-logo-link" href="index.html">
+		<a class="site-logo-link" href="/">
 			<img class="site-logoimage" src="images/daido-earth-logo.svg" alt="大同特殊鋼環境スペシャルサイト"/>
 		</a>
 	</h1>
 	<div class="header-pc-menu-right">
 		<ul class="main-nav">
-			<li class="animation"><a class="main-nav-link" href="/business.html">事業から見る<br class="br-pc">環境性</a></li>
-			<li class="animation"><a class="main-nav-link" href="/technology.html">技術から見る<br class="br-pc">環境性</a></li>
-			<li class="animation"><a class="main-nav-link" href="#">製品から見る<br class="br-pc">環境性</a></li>
-			<li class="animation"><a class="main-nav-link" href="#">緑化・生物多様性<br class="br-pc">への取組</a></li>
-			<li class="animation"><a class="main-nav-link" href="https://www.daido.co.jp/">大同特殊鋼<br class="br-pc">コーポレートサイト</a></li>
+			<li class="animation"><a class="main-nav-link" href="/business.html">事業から見る<br>環境性</a></li>
+			<li class="animation"><a class="main-nav-link" href="/technology.html">技術から見る<br>環境性</a></li>
+			<li class="animation"><a class="main-nav-link" href="#">製品から見る<br>環境性</a></li>
+			<li class="animation"><a class="main-nav-link" href="#">緑化・生物多様性<br>への取組</a></li>
+			<li class="animation"><a class="main-nav-link" href="https://www.daido.co.jp/">大同特殊鋼<br>コーポレートサイト</a></li>
 		</ul>
 	</div>
 	</div>
@@ -64,6 +132,7 @@
 		</div>
 	</div>
 	<div id="site-top-door-block2">
+		<a href="#site-top-navi" id="scroll"><span>SCROLL</span></a>
 		<h2 class="site-top-bg-text"><img class="bg-text" src="images/text-futre.svg" alt="さあ、サステナブルな未来へ。"/></h2>
 		<div id="site-top-bg2"><img class="site-top-bg-image" src="images/top-bg-hamatonbetsu.jpg" alt="バックグラウンドイメージ01"/></div>
 	</div>
@@ -124,15 +193,14 @@
 			<ul id="footer-menu-inner">
 				<li><a href="https://www.daido.co.jp/"><img class="daido-logo" src="images/daido-logo.svg" alt="大同特殊鋼"/></a></li>
 				<li><a href="https://www.daido.co.jp/">コーポレートサイト</a></li>
-				<li><a href="#">100周年特設サイト</a></li>
-				<li class="twitter"><a href="#">Twitter</a></li>
+				<li><a href="http://www.daido-100th.com/">100周年特設サイト</a></li>
+				<li class="twitter"><a href="https://twitter.com/daidosteel_pr">Twitter</a></li>
 			</ul>
 		</nav>
 	</div>
 	<p>Copyright©2020 Daido Steel Co., Ltd.</p>
 </footer>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
 $(function(){
     $('a[href^="#"]').click(function(){
@@ -147,29 +215,30 @@ $(function(){
 </script>
 <script src="js/userAgent.js"></script>
 <script src="js/common.js"></script>
-<script type="text/javascript">
-$(function() {
-  var h = $(window).height();
-  $('#loader-bg ,#loader').height(h).css('display','block');
-  $('#wrapper').css('display','none');
-});
-$(window).on('load', function () { // 読み込み完了したら実行する
-	$('#loader-bg').delay(900).fadeOut(800);
-	$('#loader').delay(600).fadeOut(300);
-	$('#wrapper').fadeIn(100);
-	$('.site-top-bg-text').delay(2000).fadeIn(4000);
-	setTimeout(function(){
-		$('#site-top-door-block-inner').addClass('aniation');
-		$('.open-the-door').addClass('animation');
-	}, 1*50);
-	setTimeout(function(){
-		$('#site-top-left').addClass('animation');
-		$('#site-top-right').addClass('animation');
-	}, 1*80);
-	setTimeout(function(){
-		$('#site-top-door-block').delay(1400).fadeOut(1400);
-	}, 1*700);
-});
+<script>
+jQuery(function(){
+   jQuery(window).scroll(function(){
+      var obj_t_pos = jQuery('#site-top-link-hamaton').offset().top;
+      var scr_count = jQuery(document).scrollTop() + (window.innerHeight/2); // ディスプレイの半分の高さを追加
+      if(scr_count > obj_t_pos){
+         jQuery('#site-top-link-hamaton').addClass('open');
+      }else{
+         jQuery('#site-top-link-hamaton').removeClass('open');
+      }
+   })
+})
+
+jQuery(function(){
+   jQuery(window).scroll(function(){
+      var obj_t_pos = jQuery('#site-top-link-inochi').offset().top;
+      var scr_count = jQuery(document).scrollTop() + (window.innerHeight/2); // ディスプレイの半分の高さを追加
+      if(scr_count > obj_t_pos){
+         jQuery('#site-top-link-inochi').addClass('open');
+      }else{
+         jQuery('#site-top-link-inochi').removeClass('open');
+      }
+   })
+})
 </script>
 </body>
 </html>
