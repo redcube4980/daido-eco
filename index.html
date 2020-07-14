@@ -19,6 +19,11 @@
 <link rel="stylesheet" href="https://use.typekit.net/tpe3qzy.css">
 </head>
 <body>
+<div id="loader-bg">
+  <div id="loader">
+    <img src="images/loading.svg" width="80" height="80" alt="Now Loading..." />
+  </div>
+</div>
 <div id="wrapper">
 <header id="site-header">
 	<div id="site-header-inner">
@@ -145,18 +150,24 @@ $(function(){
 <script type="text/javascript">
 $(function() {
   var h = $(window).height();
+  $('#loader-bg ,#loader').height(h).css('display','block');
+  $('#wrapper').css('display','none');
 });
 $(window).on('load', function () { // 読み込み完了したら実行する
 	$('#loader-bg').delay(900).fadeOut(800);
 	$('#loader').delay(600).fadeOut(300);
-	$('#wrapper').css('display', 'block');
+	$('#wrapper').fadeIn(100);
 	$('.site-top-bg-text').delay(2000).fadeIn(4000);
 	setTimeout(function(){
-		$('#site-top-door-block-inner').addClass('amiation');
-		$('.open-the-door').addClass('amimation');
+		$('#site-top-door-block-inner').addClass('aniation');
+		$('.open-the-door').addClass('animation');
 	}, 1*50);
 	setTimeout(function(){
-		$('#site-top-door-block').delay(1000).fadeOut(2000);
+		$('#site-top-left').addClass('animation');
+		$('#site-top-right').addClass('animation');
+	}, 1*80);
+	setTimeout(function(){
+		$('#site-top-door-block').delay(1400).fadeOut(1400);
 	}, 1*700);
 });
 </script>

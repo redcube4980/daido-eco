@@ -531,6 +531,14 @@ main .container {
 #goals-block .goals-link{
     font-size: 21px;
 }
+/*******************************
+	breadcrumbs
+*******************************/
+#breadcrumbs {
+    padding: 20px 0;
+    max-width: 960px;
+    margin: 0 auto;
+}
 }
 @media only screen and (min-width: 1281px) {
 /*******************************

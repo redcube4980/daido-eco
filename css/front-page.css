@@ -20,12 +20,13 @@ main .container {
 main .container #site-top-door-block{
 	position: absolute;
 	width: 100%;
+	z-index: 2;
 }
 main .container #site-top-door-block-inner{
 	position: relative;
 	width: 100%;
 }
-main .container #site-top-door-block-inner.amiation{
+main .container #site-top-door-block-inner.aniation{
 	position: relative;
 	transform-origin: center;
 	-webkit-animation:  door-open 2.5s ease-in-out;
@@ -58,7 +59,7 @@ main .container #site-top-door-block .open-the-door {
     transform: translateY(-50%);
 	opacity: 0;
 }
-main .container #site-top-door-block .open-the-door.amimation {
+main .container #site-top-door-block .open-the-door.animation {
     position: absolute;
     z-index: 10;
     width: 100%;
@@ -91,6 +92,19 @@ main .container #site-top {
     position: relative;
 	overflow: hidden;
 }
+main .container #site-top-bg2 {
+	animation:  top-bg 3s ease-in-out;
+	animation-iteration-count: 1;
+	opacity: 1;
+}
+@keyframes top-bg {
+  0% {
+	opacity: 0;
+	}
+  100% { 
+	opacity: 1;
+	}
+}
 main .container #site-top-bg {
     position: relative;
 }
@@ -119,7 +133,7 @@ main .container #site-top-door {
 	-webkit-perspective: 200px;
 	transform-origin: left;
 }
-#site-top-door #site-top-left {
+#site-top-door #site-top-left.animation {
     width: 50%;
     height: 100%;
     display: block;
@@ -144,7 +158,7 @@ main .container #site-top-door {
     display: block;
 	position: relative;
 }
-#site-top-door #site-top-right {
+#site-top-door #site-top-right.animation {
     width: 50%;
     height: 100%;
     display: block;
